@@ -137,7 +137,7 @@ void loop() { // put your main code here, to run repeatedly:
       delay(pause); // warten
     break;
     // -- case 3 -----------------------------------------------------------------------------------
-    case 3:
+    case 3: // Pixel einzeln einschalten
       pixels.setPixelColor(i, 0, 255, 0, 0); // Pixel leuchtet in der Farbe Grün 
       if (i==0) {
         pixels.setPixelColor(NUMPIXELS - 1, 0, 0, 0, 0); // Im Fall von Pixel "0" muss die vorherige (NUMPIXELS - 1) ausgeschaltet werden.
@@ -151,7 +151,7 @@ void loop() { // put your main code here, to run repeatedly:
       delay(pause); // warten
     break;
     // -- case 4 -----------------------------------------------------------------------------------
-    case 4:
+    case 4: // Helligkeit hoch und runter fahren
       switch(auf_ab) {
         case 0:
           w++;
@@ -174,7 +174,7 @@ void loop() { // put your main code here, to run repeatedly:
       delay(pause); // warten
     break;
     // -- case 5 -----------------------------------------------------------------------------------
-    case 5:
+    case 5: // Mitte weiß, Außen bunt drehen
       pixels.setPixelColor(0, 0, 0, 0, 50); // Pixel1 n leuchtet
       
       switch(bewegung) {
@@ -211,7 +211,7 @@ void loop() { // put your main code here, to run repeatedly:
       delay(pause); // warten
     break;
     // -- default ----------------------------------------------------------------------------------
-    default:
+    default: // alle Pixel voll an
       for ( int n = 0; n < 7; n++) {
         pixels.setPixelColor(n, 255, 255, 255, 255); // Pixel1 n leuchtet
       }
